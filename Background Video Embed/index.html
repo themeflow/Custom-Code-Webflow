@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Video Embed</title>
+</head>
+
+<style>
+  .container {
+    width: 100%;
+    margin: 0px auto;
+  }
+  .VIDEO__WRAPPER {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+  #bg-video {
+    max-width: 700px;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="VIDEO__WRAPPER">
+      <video id="bg-video" autoplay loop muted>
+        <source src="video/What is ChatGPT and How You Can Use It.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+      </video>
+      <button id="mute-button"><img src="assets/Sound Icon.svg" alt=""></button>
+    </div>
+    
+  </div>
+  
+      <script>
+        var video = document.getElementById("bg-video");
+        var muteButton = document.getElementById("mute-button");
+      
+        muteButton.addEventListener("click", function() {
+          if (video.muted) {
+            video.muted = false;
+          } else {
+            video.muted = true;
+          }
+        });
+      </script>
+      
+</body>
+</html>
